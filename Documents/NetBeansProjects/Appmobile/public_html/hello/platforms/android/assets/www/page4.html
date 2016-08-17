@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <title>page4</title>
+        <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css">
+        <link rel="shortcut icon" href="favicon.ico">
+        <script src="js/jquery-2.1.4.min.js"></script>
+        <script src="js/jquery.mobile-1.4.5.min.js"></script>
+    </head>
+    <body>
+        <div data-role="page">
+            <div data-role="header">
+                <h1>page4</h1>
+            </div>
+            <div data-role="main" class="ui-content">
+
+                <a href="page3.html" data-transition="slide" data-direction="reverse" class="
+                   ui-btn-left ui-icon-carat-l ui-btn-icon-notext ui-corner-all">back</a>
+
+                <label>Input USD:</label>
+                <input type="text" id="input_usd" value="1" 
+                       data-clear-btn="true" 
+                       placeholder="please put Input">
+                <p id="output"></p>
+
+                <button id="calculate" class="
+                        ui-btn ui-btn-icon-left ui-icon-check ui-shadow ui-corner-all"
+                        >ChangeTOThai
+                </button>
+
+                <script>
+                    $(document).ready(function () {
+                        $("#calculate").on("tap", function () {
+                            var usd = $("#input_usd").val();
+                            var rate = 34.4653;
+                            var thb = usd * rate;
+                            $("#output").html("MoneyThai = " + thb);
+                        });
+                    });
+                </script>
+
+                <br>
+                <br>
+                <br>
+                <br>
+                <a href="page5.html" data-transition="slide" class="
+                   ui-btn ui-btn-icon-right ui-icon-carat-r ui-shadow ui-corner-all">page5</a>
+
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <title>page1</title>
+        <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css">
+        <link rel="shortcut icon" href="favicon.ico">
+        <script src="js/jquery-2.1.4.min.js"></script>
+        <script src="js/jquery.mobile-1.4.5.min.js"></script>
+        <script type="text/javascript" charset="utf-8" src="js/cordova.js"></script>
+        <script>
+            function init() {
+                document.addEventListener("deviceready", onDeviceReady, false);
+            }
+            function onDeviceReady() {
+                alert ('device is ready');
+            }
+        </script>
+    </head>
+    <body onload="init();">
+
+        <div data-role="page">
+            <div data-role="header">
+                <h1>page1</h1>
+            </div>
+            
+            <div data-role="main" class="ui-content">
+                <div data-role="tabs">
+                    <div data-role="navbar" >
+                        <ul>
+                            <li><a href="#cmd" data-icon="grid" class="ui-btn-active">cmd</a></li>
+                            <li><a href="#list"  data-icon="bullets">List</a></li>
+                            <li><a href="#about" data-icon="info">About</a></li>
+                        </ul>
+                    </div> 
+                    <div id="cmd" class="ui-body ui-content">
+                        <h1>รวมคำสั่งที่ใช้ทำงาน</h1>
+                        <p>cordova create ชื่อโฟเดอร์App ชื่อแพคเกจ ชื่อApp</p>
+                        <p>cordova platform add android / cordova platform add ios</p>
+                        <p>cordova platform remove ios</p>
+                        <p>cordova build</p>
+                        <p>cordova build android เฉพาะ platform</p>
+                        <p>cordova emulate android คำสั่งนี้ จะ build และ run กับอุปกรณ์จำลองโทรศัพท์ในเครื่องPC</p>
+                        <p>cordova run android / cordova run ios ทดสอบrunกับอุปกรณ์จริง</p>
+                        <p>cordova serve เปิดเซอร์วิสเป็นเซิฟเวอร์โดยเข้า localhost:8000</p>
+                        <p>cordova prepare เป็นการ copy HTML CSS Javascript ไปใส่แต่ละ platform</p>
+                    </div>
+                    <div id="list" class="ui-body ui-content">
+                        <ul data-role="listview" data-inset="true">
+                            <li><a href="#">list1</a></li>
+                            <li><a href="#">list2</a></li>
+                            <li><a href="#">list3</a></li>
+                            <li><a href="#">list4</a></li>
+                            <li><a href="#">list5</a></li>
+                        </ul>
+                    </div>
+                    <div id="about" class="ui-body ui-content">
+                        <h1>My name is Jasin Saengsuang</h1>
+                    </div>
+                </div>
+            </div>
+
+            <a href="page2.html" data-transition="slide" class="
+               ui-btn ui-btn-icon-right ui-icon-carat-r ui-shadow ui-corner-all">page2</a>
+
+        </div>
+
+    </body>
+</html>
